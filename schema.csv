@@ -1,0 +1,35 @@
+"? Higher Electricity Usage ? ? More Likely to Have an EV
+
+    If Total_Electricity_Usage_kWh > 900, higher chance of owning an EV.
+    If < 600 kWh, lower probability.
+
+? Charging Infrastructure ? Strongest Indicator
+
+    If Charging_Type = ""Level 1"", ""Level 2"", or ""DC Fast"" ? Must have an EV.
+    If Charging_Type = ""None"", much lower probability."
+"? Home Type & Space Consideration
+
+    Detached Houses are more likely to have an EV.
+    Apartments are less likely (due to parking & charging constraints).
+
+? Proximity to Charging Stations
+
+    If Nearby_Charging_Station_Distance_km > 10 km, less likely to have an EV.
+    If < 2 km, slightly higher probability."
+"? Income & Lifestyle Impact
+
+    If Household_Income_kUSD > 100, significantly increases EV probability.
+    If Household_Income_kUSD < 50, lower EV probability.
+
+? Solar Panels & Environmental Mindset
+
+    If Has_Solar_Panels = 1, higher chance of EV ownership.
+
+? Geographic & Weather Considerations
+
+    If Geographic_Location_Score > 80, higher likelihood of EV adoption.
+    If Avg_Temperature_C < -5°C, slightly lower probability (battery efficiency concerns).
+
+? More Vehicles in Household = Higher Chance of an EV
+
+    If Num_Vehicles > 1, higher chance of at least one being an EV."

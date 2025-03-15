@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        form { width: 300px; margin: auto; text-align: left; }
+        input, button { width: 100%; margin-bottom: 10px; padding: 8px; }
+        .result { font-size: 20px; margin-top: 20px; color: green; }
+    </style>
+</head>
+<body>
+    <h2>🚗 Electric Vehicle Prediction</h2>
+    <form action="/predict" method="post">
+        <label>Total Electricity Usage (kWh):</label>
+        <input type="text" name="Total_Electricity_Usage_kWh" required>
+
+        <label>Household Income (kUSD):</label>
+        <input type="text" name="Household_Income_kUSD" required>
+
+        <label>Charging Station Distance (km):</label>
+        <input type="text" name="Nearby_Charging_Station_Distance_km" required>
+
+        <label>Daily Commute Distance (km):</label>
+        <input type="text" name="Daily_Commute_Distance_km" required>
+
+        <label>Electricity Cost per kWh:</label>
+        <input type="text" name="Electricity_Cost_Per_kWh" required>
+
+        <label>Cost of Living Index:</label>
+        <input type="text" name="Cost_of_Living_Index" required>
+
+        <button type="submit">Predict EV Ownership</button>
+    </form>
+
+    {% if prediction_text %}
+    <p class="result">{{ prediction_text }}</p>
+    {% endif %}
+</body>
+</html>
